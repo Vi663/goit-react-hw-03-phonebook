@@ -1,9 +1,11 @@
-// import './App.css';
 import React, { Component } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { MainContainer } from "../MainContainer/MainContainer";
 import { ContactForm } from "../ContactForm/ContactForm";
 import { Filter } from "../Filter/Filter";
 import { ContactList } from "../ContactList/ContactList";
+
 
 export class App extends Component {
   
@@ -21,7 +23,8 @@ export class App extends Component {
           ...prevState,
           contacts: [...prevState.contacts, data]
         };
-      } alert(`${data.name} is already in contacts`);
+      }
+      toast.warn(`${data.name} is already in contacts`);
     });
   }
 
@@ -52,24 +55,23 @@ export class App extends Component {
   }
 
   componentDidMount() {
-    const contacts = JSON.parse(localStorage.getItem('contacts'));
-    this.setState({contacts: contacts});
+    const contacts = localStorage.getItem('contacts');
+    const parsedContacts = JSON.parse(contacts);
+    this.setState({contacts: parsedContacts});
   }
 
-  render() {
+ render() {
     const { filter } = this.state;
     const visibleContacts = this.getVisibleContacts();
     return (
       <MainContainer>
-        <div>
           <h1>Phonebook</h1>
           <ContactForm onSubmit={this.formSubmitHandler}/>
-
           <Filter value={filter} onChange={this.findByName}/>
           <ContactList
             contacts={visibleContacts}
-            onDeleteContact={this.deleteContact}/>
-        </div>
+          onDeleteContact={this.deleteContact} />
+        <ToastContainer autoClose={2000}/>
       </MainContainer>
     );
   }
