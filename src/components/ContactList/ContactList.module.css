@@ -1,0 +1,30 @@
+.ContactList {
+  list-style: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.03em;
+  margin: 0;
+  padding-top: 20px;
+}
+
+.ContactItem {
+  display: flex;
+  width: 350px;
+  justify-content: space-between;
+}
+
+.ContactBtn {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  width: 60px;
+  height: 25px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(219, 183, 135, 0.74);
+  color: rgb(255, 255, 255);
+}

@@ -1,0 +1,27 @@
+.ContactForm {
+  padding: 20px;
+}
+
+.ContactInput {
+  width: 150px;
+  height: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  letter-spacing: 0.03em;
+  margin: 0 15px;
+  border-radius: 5px;
+  border: 1px burlywood solid;
+}
+
+.ContactBtn {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  width: 120px;
+  height: 25px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(219, 183, 135, 0.74);
+  color: rgb(255, 255, 255);
+}

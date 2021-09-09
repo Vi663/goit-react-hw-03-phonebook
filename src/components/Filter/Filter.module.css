@@ -1,0 +1,19 @@
+.FilterLabel {
+  padding: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0.03em;
+  
+}
+
+.FilterInput {
+  width: 150px;
+  height: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  letter-spacing: 0.03em;
+  margin-left: 15px;
+  border-radius: 5px;
+  border: 1px burlywood solid;
+}
