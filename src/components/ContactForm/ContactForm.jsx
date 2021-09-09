@@ -21,12 +21,12 @@ export class ContactForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.onSubmit(this.state);
+    this.props.onSubmit({id: uuidv4(), ...this.state});
     this.resetForm();
   }
 
   resetForm = () => {
-    this.setState({ id: uuidv4(), name: '', number: ''})
+    this.setState({ name: '', number: ''})
   }
 
   render() {

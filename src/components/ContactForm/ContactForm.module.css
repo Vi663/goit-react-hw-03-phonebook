@@ -10,7 +10,7 @@
   letter-spacing: 0.03em;
   margin: 0 15px;
   border-radius: 5px;
-  border: 1px burlywood solid;
+  border: 1px #e46c6cea solid;
 }
 
 .ContactBtn {
@@ -22,6 +22,6 @@
   outline: none;
   border: none;
   border-radius: 5px;
-  background-color: rgba(219, 183, 135, 0.74);
+  background-color: #e46c6cea;
   color: rgb(255, 255, 255);
 }
